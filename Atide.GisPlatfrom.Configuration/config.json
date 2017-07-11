@@ -1,0 +1,9 @@
+﻿{
+  "url": "localhost",
+  "ywsqlconn": {
+    "server": "172.16.1.233",
+    "uid": "sa",
+    "pwd": "123",
+    "database": "SalesERPDB"
+  }
+}
