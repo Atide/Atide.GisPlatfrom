@@ -8,7 +8,7 @@ namespace Atide.GisPlatfrom.Common.Security
     public class MD5Security
     {
         /// <summary>
-        /// netcore下的实现MD5加密
+        /// netcore下的实现MD5加密vstest
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
