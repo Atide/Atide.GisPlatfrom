@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-//using Atide.GisPlatfrom.Configuration;
+using Atide.GisPlatfrom.Configuration;
 
 namespace Atide.GisPlatfrom.Web.Controllers
 {
@@ -11,7 +11,7 @@ namespace Atide.GisPlatfrom.Web.Controllers
     {
         public IActionResult Index()
         {
-            //ViewData["Message"] = ConfigManager.AppSettings.Url;
+            ViewData["Message"] = ConfigManager.AppSettings.Url;
             return View();
         }
 

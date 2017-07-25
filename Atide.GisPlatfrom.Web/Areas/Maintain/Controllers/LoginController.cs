@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Atide.GisPlatfrom.IRepository;
 using Atide.GisPlatfrom.Common.Security;
-using Atide.GisPlatfrom.Model.TableModel;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Atide.GisPlatfrom.Web.Areas.Maintain.Controllers
@@ -39,9 +38,9 @@ namespace Atide.GisPlatfrom.Web.Areas.Maintain.Controllers
             {
                 return Content("empty");
             }
-            //password = MD5Security.MD5Hash(password);
-            User user = iUserBusiness.RetriveOneEntityByNameAndPwd(username, password);
-            if (user != null)
+            password = MD5Security.MD5Hash(password);
+            var user = iUserBusiness.RetriveOneEntityByNameAndPwd(username, password);
+            if (user !=  null)
             {
                 HttpContext.Session.SetInt32("userid", user.Id);
                 HttpContext.Session.SetString("username", username);

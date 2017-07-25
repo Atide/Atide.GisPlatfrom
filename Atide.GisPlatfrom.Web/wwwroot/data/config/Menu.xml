@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Menus>
+  <Menu>
+    <title>路网规划</title>
+    <id>ghsj</id>
+    <image>/Content/MapsDisplaySys/Images/Icons/Bjsj.png</image>
+    <style>border-left: 1px solid #6f6f6f;</style>
+    <isvalid>1</isvalid>
+  </Menu>
+  <!--<Menu>
+    <title>背景数据</title>
+    <id>bjsj</id>
+    <image>/Content/MapsDisplaySys/Images/Icons/Ghsj.png</image>
+    <style></style>
+    <isvalid>1</isvalid>
+  </Menu>-->
+  <Menu>
+    <title>指标统计</title>
+    <id>zbtj</id>
+    <image>/Content/MapsDisplaySys/Images/Icons/Jdzb.png</image>
+    <style></style>
+    <isvalid>1</isvalid>
+  </Menu>
+  <Menu>
+    <title>交通流量</title><!--交调指标-->
+    <id>jdzb</id>
+    <image>/Content/MapsDisplaySys/Images/Icons/Jtzb.png</image>
+    <style></style>
+    <isvalid>1</isvalid>
+  </Menu>
+  <Menu>
+    <title>投资进度</title>
+    <id>tzjd</id>
+    <image>/Content/MapsDisplaySys/Images/Icons/Tzjd.png</image>
+    <style></style>
+    <isvalid>1</isvalid>
+  </Menu>
+</Menus>
+

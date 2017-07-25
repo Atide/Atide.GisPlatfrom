@@ -8,9 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Atide.GisPlatfrom.DependencyInjection;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-
-
 namespace Atide.GisPlatfrom.Web
 {
     public class Startup
@@ -31,23 +28,9 @@ namespace Atide.GisPlatfrom.Web
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            RepositoryInjection.ConfigureRepository(services);
-            services.AddMvc();
-            services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
-            // Adds a default in-memory implementation of IDistributedCache.
-            //services.AddDistributedMemoryCache();
-
-            //services.AddSession(options =>
-            //{
-            //    // Set a short timeout for easy testing.
-            //    options.IdleTimeout = TimeSpan.FromSeconds(10);
-            //    options.CookieHttpOnly = true;
-            //});
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30);
-            });
-            services.AddSwaggerGen();
+			RepositoryInjection.ConfigureRepository(services);
+			services.AddMvc();
+			services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,14 +55,9 @@ namespace Atide.GisPlatfrom.Web
             }
 
             app.UseStaticFiles();
-            app.UseSession();
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "areaRoute",
-                    template: "{area:exists}/{controller}/{action=Index}/{id?}");
-
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

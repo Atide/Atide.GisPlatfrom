@@ -56,7 +56,7 @@ namespace Atide.GisPlatfrom.Web.Areas.Maintain.Controllers
                 return MsgContent("原密码错误！");
             bool isSuccess = _userService.UpdateEntityPwd(new User() { Id = userid, Password = Common.Security.MD5Security.MD5Hash(newpwd1) });
             if (isSuccess)
-                return Content("<script>alert('修改密码成功！');parent.location.href='/Maintain/Login'</script>", "text/html");
+                return Content("<script>alert('修改密码成功！');parent.location.href='/Admin/Login'</script>", "text/html");
             return MsgContent("密码修改失败！");
         }
 

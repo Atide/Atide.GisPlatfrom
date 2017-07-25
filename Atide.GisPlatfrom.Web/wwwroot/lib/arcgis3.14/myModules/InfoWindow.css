@@ -1,0 +1,42 @@
+.myInfoWindow {
+  position: absolute;
+  z-index: 100;
+  border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px;
+  -moz-box-shadow: 0 0 1em #26393D;
+  border: 2px solid #eae8e8;
+  font-family: sans-serif;
+  font-size: 12px;
+  background-color:#EFECCA;
+}
+
+.dj_ie .myInfoWindow {
+  border: 1px solid black;
+}
+
+.myInfoWindow .content {
+  position: relative;
+  background-color:#fff;
+  color:#002F2F;
+  overflow: auto;
+  padding:2px 2px 2px 2px;
+}
+
+.myInfoWindow .close {
+  position: absolute; top: 0px; right: 0px;
+  cursor: pointer;
+  background: url(https://serverapi.arcgisonline.com/jsapi/arcgis/2.6/js/dojo/dijit/themes/claro/layout/images/tabClose.png) no-repeat scroll 0 0 transparent;
+  width: 12px; height: 12px;
+  margin: 3px 3px 0px 0px;
+}
+
+.myInfoWindow .close:hover  {
+  background-color: #F7FCFF;
+}
+
+
+.myInfoWindow .title {
+  font-weight: bold;
+  padding: 2px 2px 2px 2px;
+  background-color:#eae8e8;
+  color:#E6E2AF;
+}
